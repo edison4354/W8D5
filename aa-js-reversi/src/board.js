@@ -10,6 +10,12 @@ if (typeof window === 'undefined'){
  * and two white pieces at [3, 3] and [4, 4].
  */
 function _makeGrid() {
+    const gridBoard = Array.from(Array(8), () => new Array(8))
+    gridBoard[3][4] = new Piece('black');
+    gridBoard[4][3] = new Piece('black');
+    gridBoard[3][3] = new Piece('white');
+    gridBoard[4][4] = new Piece('white');
+    return gridBoard;
 }
 
 /**
